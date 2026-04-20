@@ -11,20 +11,21 @@ npm install github:JuDaXia/clawtile-openclaw-plugin
 
 ## Configuration
 
-1. Get an API key from https://web.clawtile.com → **API Keys**.
+1. Get an API key from the ClawTile web panel (http://voinko.com:3000) →
+   **API Keys**.
 2. Add to your `openclaw.yaml` (or equivalent `clawdbot.json`):
 
 ```yaml
 channels:
   clawtile:
     enabled: true
-    cloudUrl: "wss://api.clawtile.com/openclaw"
+    cloudUrl: "ws://voinko.com:3000/ws/openclaw"
     apiKey: "ct_key_xxxxx"
 ```
 
 3. Restart OpenClaw. When you see `[clawtile] connected` in the log, power on
-   your ClawTile hardware and bind the 6-digit code shown on its screen at
-   https://web.clawtile.com → **My Devices**.
+   your ClawTile hardware and bind the 6-digit code shown on its screen at the
+   web panel → **My Devices**.
 
 ## Standalone testing
 
