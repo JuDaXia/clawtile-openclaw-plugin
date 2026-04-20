@@ -1,0 +1,29 @@
+{
+  "id": "clawtile",
+  "channels": ["clawtile"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "clawtile": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "description": "Enable or disable the ClawTile channel"
+          },
+          "cloudUrl": {
+            "type": "string",
+            "description": "ClawTile cloud platform WebSocket URL (e.g. ws://192.168.31.154:3000/ws/openclaw)"
+          },
+          "apiKey": {
+            "type": "string",
+            "description": "API key from the ClawTile web panel (e.g. ct_key_xxx)"
+          }
+        },
+        "required": ["cloudUrl", "apiKey"]
+      }
+    }
+  }
+}

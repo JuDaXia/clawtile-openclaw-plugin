@@ -1,0 +1,56 @@
+{
+  "name": "@clawtile/openclaw-plugin",
+  "version": "0.1.0",
+  "description": "ClawTile e-ink device channel plugin for OpenClaw",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JuDaXia/clawtile-openclaw-plugin.git"
+  },
+  "license": "MIT",
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "setupEntry": "./setup-entry.ts",
+    "channel": {
+      "id": "clawtile",
+      "label": "ClawTile",
+      "selectionLabel": "ClawTile (E-Ink Device)",
+      "detailLabel": "ClawTile Device",
+      "blurb": "connect ClawTile e-ink hardware devices via the cloud platform."
+    }
+  },
+  "files": [
+    "dist/",
+    "scripts/",
+    "skills/",
+    "index.ts",
+    "setup-entry.ts",
+    "openclaw.plugin.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "typecheck": "tsc --noEmit",
+    "standalone": "tsx src/standalone.ts",
+    "install-whisper": "python3 -m pip install --user -U faster-whisper || python -m pip install --user -U faster-whisper"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.1.29"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.49",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.10",
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  }
+}

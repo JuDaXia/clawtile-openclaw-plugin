@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "outDir": "dist",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "openclaw/plugin-sdk/core": ["./typings/plugin-sdk-core.d.ts"],
+      "openclaw/plugin-sdk/runtime-store": ["./typings/plugin-sdk-runtime-store.d.ts"],
+      "openclaw/plugin-sdk/channel-inbound": ["./typings/plugin-sdk-channel-inbound.d.ts"]
+    }
+  },
+  "include": ["index.ts", "setup-entry.ts", "src"],
+  "exclude": ["node_modules", "dist"]
+}
